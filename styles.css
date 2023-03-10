@@ -1,0 +1,245 @@
+:root {
+    --fontColor: black;
+    --backgroundColor: white;
+    --avatar: url("https://rickandmortyapi.com/api/character/avatar/2.jpeg");
+}
+
+html {
+    display: flex;
+    flex-flow: column;
+    background-color: #aacbe8;
+    color: var(--fontColor);
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    /* border: solid; */
+}
+
+/* body containers */
+.flex-container-main {
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    margin: 15px;
+    color: var(--fontColor);
+    background-color: var(--backgroundColor);
+    border-radius: 15px;
+    border-color: #000000;
+    box-shadow: 10px 5px 5px rgb(81, 81, 81);;
+}
+
+.flex-main-content {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    color: var(--fontColor);
+    border-color: #000000;
+}
+
+.container-header {
+    height: auto;
+    color: black;
+    font-size: 20px;
+    width: 90%;
+    padding: 15px;
+    margin: 15px;
+}
+
+.footer-class {
+    width: 100%;
+    background: var(--backgroundColor);
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+/* grid templates */
+.grid-green-chat-template {
+    background-color:var(--backgroundColor);
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+}
+
+.grid-blue-chat-template {
+    background-color:var(--backgroundColor);
+    place-items: center;
+    align-items: center;
+    display: grid;
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.grid-message-template {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    border-radius: 8px;
+}
+
+.grid-tick-mark {
+    place-items: center;
+    align-items: center;
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+/* Flex areas */
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+/* content styles */
+.align-left {
+    justify-self: baseline;
+}
+
+.padding-xs {
+    padding: 8px;
+}
+
+.padding-left-md {
+    padding-left: 16px;
+}
+
+.padding-top-md {
+    padding-top: 16px;
+}
+
+.margin-bot-md {
+    margin-bottom: 16px;
+}
+
+.avatar {
+    align-self: start;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-size: cover;
+    background-image: var(--avatar);
+}
+
+.green-message {
+    width: 100%;
+    background-color: rgba(31, 255, 31, 0.216);
+}
+
+.blue-message {
+    width: 100%;
+    background-color: rgba(31, 109, 255, 0.216);
+}
+
+.text-style {
+    margin: 16px 0px 0px 0px;
+    justify-self: start;
+    padding: 0px 8px 0px 8px;
+}
+
+.time-text {
+    justify-self: end;
+    margin: 0;
+    padding: 0px 8px 0px 8px;
+    color: grey;
+}
+
+.align-right {
+    display: flex;
+    justify-self: right;
+}
+
+.tick-mark {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.tick-mark::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: grey;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.tick-mark::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.tick-mark2 {
+    position: absolute;
+    display: inline-block;
+    font-weight: lighter;
+    width: 16px;
+    height: 16px;
+    top: auto;
+    margin-bottom: 16px;
+    right: 290px;
+
+}
+
+.tick-mark2::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: grey;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.tick-mark2::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.double-tick-mark {
+    width: 32px;
+}
